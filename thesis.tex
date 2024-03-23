@@ -1,0 +1,76 @@
+
+
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage[left= 2cm,right=2cm,top= 3cm,bottom=3cm]{geometry}
+\usepackage{tocloft}
+\usepackage{color,soul}
+\usepackage{colortbl}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\numberwithin{equation}{chapter}%公式按章节编号
+\numberwithin{figure}{chapter}
+%\usepackage[page,titletoc,title]{appendix}
+
+\setlength{\cftchapnumwidth}{2.25cm}
+\renewcommand{\cftchappresnum}{Chapter }
+\renewcommand{\cftchapaftersnum}{.  }
+% \renewcommand{\cftsecaftersnum}{.}
+
+%\renewcommand\thesubsubsection{\thesubsection.\Alph{subsubsection}}
+
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\appendixname}{Appendix}
+\usepackage[page,toc,titletoc,title]{appendix}
+\usepackage{tocloft}
+
+
+\input{thesis.preamble}
+
+\begin{document}
+
+ \title{\LARGE {\bf  Investigation of Post-stroke Dynamic Functional Connectivity Network and Its Utilization on Motor Function Evaluation}\\
+ 	\vspace*{6mm}
+ }
+ \author{KAICHAO WU}
+ \priorqualification{Master of Engineering, Shantou Univeristy, China}
+ \orcid{0000-0001-6988-624X}
+ \submitdate{October 2023}
+
+ \normallinespacing
+ \maketitle
+
+% \preface
+ \input{Dedication/dedication}
+ \let\cleardoublepage\clearpage
+ \input{Acknowledgements/acknowledgements}
+ \input{Abstract/abstract}
+
+
+\body
+
+\pagestyle{uheadings}
+\input{Introduction/introduction}
+% \input{Chapter2/chapter2_review}
+% \input{Chapter4/chapter4_elderly}
+
+% \input{Chapter6/Chapter6_reconfiguration}
+%\input{Chapter7/Chapter7_dynamic_behavior}
+% body of thesis comes here
+% \input{Conclusion/conclusion}
+
+\appendix
+
+\begin{appendices}
+
+  % appendices come here
+% \input{Appendix/A_covid/COVID19_Two}
+% \input{Appendix/D_graph/graph}
+% \input{Appendix/B_ethic/ethic}
+
+\end{appendices}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{ieeetr}
+\bibliography{thesis}
+
+\end{document}
